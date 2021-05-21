@@ -29,6 +29,7 @@ To simply assert that an object is a monetary value, use the `toBeMoney` method:
 
 ```php
 expect(Money::of(100, "GBP"))->toBeMoney();
+expect("Hello World")->not->toBeMoney();
 ```
 
 ### toCost
@@ -37,6 +38,7 @@ To check that a monetary value is equal to a certain amount, use the `toCost` me
 
 ```php
 expect(Money::of(150, "GBP"))->toCost(150, 'GBP');
+expect(Money::of(150, "GBP"))->toCost($anotherMoneyObject);
 expect(Money::of(150, "GBP"))->not->toCost(100, 'GBP');
 ```
 
@@ -46,6 +48,7 @@ To check that a monetary value is less than a certain amount, use the `toCostLes
 
 ```php
 expect(Money::of(150, "GBP"))->toCostLessThan(160, 'GBP');
+expect(Money::of(150, "GBP"))->toCostLessThan($anotherMoneyObject);
 expect(Money::of(150, "GBP"))->not->toCostLessThan(140, 'GBP');
 ```
 
@@ -55,6 +58,7 @@ To check that a monetary value is more than a certain amount, use the `toCostMor
 
 ```php
 expect(Money::of(150, "GBP"))->toCostMoreThan(140, 'GBP');
+expect(Money::of(150, "GBP"))->toCostMoreThan($anotherMoneyObject);
 expect(Money::of(150, "GBP"))->not->toCostMoreThan(160, 'GBP');
 ```
 
