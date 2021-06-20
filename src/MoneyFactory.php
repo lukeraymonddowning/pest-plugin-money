@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Lukeraymonddowning\PestPluginMoney;
 
 use InvalidArgumentException;
+use Lukeraymonddowning\PestPluginMoney\Contracts\ChecksMoney;
 
 final class MoneyFactory
 {
-    public static function make()
+    public static function make(): ChecksMoney
     {
         if ($GLOBALS['pestMoneyLibrary'] == \Brick\Money\Money::class) {
             return new Brick();

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Lukeraymonddowning\PestPluginMoney;
 
+use Pest\Expectation;
+
 $GLOBALS['pestCurrency']     = 'USD';
 $GLOBALS['pestMoneyLibrary'] = \Brick\Money\Money::class;
 
@@ -17,22 +19,22 @@ function useMoneyLibrary(string $moneyClass): void
     $GLOBALS['pestMoneyLibrary'] = $moneyClass;
 }
 
-expect()->extend('toBeMoney', function () {
+expect()->extend('toBeMoney', function (): Expectation {
     // @phpstan-ignore-next-line
     return MoneyFactory::make()->toBeMoney($this);
 });
 
-expect()->extend('toCost', function ($amount, $currency = null) {
+expect()->extend('toCost', function ($amount, $currency = null): Expectation {
     // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCost($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });
 
-expect()->extend('toCostMoreThan', function ($amount, $currency = null) {
+expect()->extend('toCostMoreThan', function ($amount, $currency = null): Expectation {
     // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCostMoreThan($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });
 
-expect()->extend('toCostLessThan', function ($amount, $currency = null) {
+expect()->extend('toCostLessThan', function ($amount, $currency = null): Expectation {
     // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCostLessThan($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });

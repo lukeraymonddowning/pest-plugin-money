@@ -7,14 +7,18 @@ namespace Lukeraymonddowning\PestPluginMoney;
 use Lukeraymonddowning\PestPluginMoney\Contracts\ChecksMoney;
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
+use Money\Money as MoneyObject;
 use Money\Parser\DecimalMoneyParser;
-use Pest\Expectations\Expectation;
+use Pest\Expectation;
 
+/**
+ * @implements ChecksMoney<MoneyObject>
+ */
 final class Money implements ChecksMoney
 {
     public function toBeMoney($expectation): Expectation
     {
-        return $expectation->toBeInstanceOf(\Money\Money::class);
+        return $expectation->toBeInstanceOf(MoneyObject::class);
     }
 
     public function toCost($expectation, $amount, $currency): Expectation
@@ -38,7 +42,7 @@ final class Money implements ChecksMoney
 
     private function parseMoney($amount, $currency)
     {
-        if ($amount instanceof \Money\Money) {
+        if ($amount instanceof MoneyObject) {
             return $amount;
         }
 

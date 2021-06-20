@@ -6,8 +6,11 @@ namespace Lukeraymonddowning\PestPluginMoney;
 
 use Brick\Money\Money;
 use Lukeraymonddowning\PestPluginMoney\Contracts\ChecksMoney;
-use Pest\Expectations\Expectation;
+use Pest\Expectation;
 
+/**
+ * @implements ChecksMoney<Money>
+ */
 final class Brick implements ChecksMoney
 {
     public function toBeMoney($expectation): Expectation
