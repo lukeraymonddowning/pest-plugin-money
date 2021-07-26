@@ -11,3 +11,7 @@ parameters:
     checkMissingIterableValueType: true
     checkGenericClassInNonGenericObjectType: false
     reportUnmatchedIgnoredErrors: true
+    ignoreErrors:
+        -
+            message: '/Undefined variable: \$this.*/'
+            path: src/Autoload.php

@@ -22,21 +22,17 @@ function useMoneyLibrary(string $moneyClass): void
 }
 
 expect()->extend('toBeMoney', function (): Expectation {
-    // @phpstan-ignore-next-line
     return MoneyFactory::make()->toBeMoney($this);
 });
 
 expect()->extend('toCost', function ($amount, $currency = null): Expectation {
-    // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCost($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });
 
 expect()->extend('toCostMoreThan', function ($amount, $currency = null): Expectation {
-    // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCostMoreThan($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });
 
 expect()->extend('toCostLessThan', function ($amount, $currency = null): Expectation {
-    // @phpstan-ignore-next-line
     return MoneyFactory::make()->toCostLessThan($this, $amount, $currency ?? $GLOBALS['pestCurrency']);
 });
