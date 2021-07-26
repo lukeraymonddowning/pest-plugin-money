@@ -24,6 +24,11 @@
             "src/Autoload.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Lukeraymonddowning\\PestPluginMoney\\Tests\\": "tests"
+        }
+    },
     "require-dev": {
         "brick/money": "^0.5.2",
         "moneyphp/money": "^3.3",
