@@ -16,7 +16,7 @@ This package requires the following:
 
 - Pest PHP
 - Either the Brick Money or MoneyPHP Money libraries
-- PHP 7.4 or greater
+- PHP 7.3 or greater
 
 ## Usage
 
@@ -64,8 +64,8 @@ expect(Money::of(150, "GBP"))->not->toCostMoreThan(160, 'GBP');
 
 ## Choosing a money library
 
-This package uses Brick Money as a default, but you can change that using the `useMoneyLibrary` function.
-Pass the class name of the relevant money package:
+This package will attempt to autodetect which of the supported money libraries you have installed. If you want to 
+enforce which library to use, you can call the `useMoneyLibrary` function. Pass the class name of the relevant money package:
 
 ```php
 useMoneyLibrary(\Money\Money::class); // Use the MoneyPHP library

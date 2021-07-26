@@ -7,13 +7,15 @@ namespace Lukeraymonddowning\PestPluginMoney;
 use Pest\Expectation;
 
 $GLOBALS['pestCurrency']     = 'USD';
-$GLOBALS['pestMoneyLibrary'] = \Brick\Money\Money::class;
 
 function useCurrency(string $currency): void
 {
     $GLOBALS['pestCurrency'] = $currency;
 }
 
+/**
+ * @param class-string $moneyClass
+ */
 function useMoneyLibrary(string $moneyClass): void
 {
     $GLOBALS['pestMoneyLibrary'] = $moneyClass;

@@ -29,6 +29,10 @@
         "moneyphp/money": "^3.3",
         "pestphp/pest-dev-tools": "dev-master"
     },
+    "suggest": {
+        "brick/money": "A powerful, immutable money library with support for specialized currencies",
+        "moneyphp/money": "A simpler but less versatile money library"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
