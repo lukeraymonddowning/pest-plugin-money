@@ -13,8 +13,9 @@ use Lukeraymonddowning\PestPluginMoney\Contracts\ChecksMoney;
 final class MoneyFactory
 {
     private static $map = [
-        \Brick\Money\Money::class => Brick::class,
-        \Money\Money::class       => Money::class,
+        \Brick\Money\Money::class   => Brick::class,
+        \Money\Money::class         => Money::class,
+        \Cknow\Money\Money::class   => LaravelMoney::class
     ];
 
     public static function make(): ChecksMoney
@@ -29,6 +30,10 @@ final class MoneyFactory
 
         if (class_exists(\Money\Money::class)) {
             return new Money();
+        }
+
+        if (class_exists(\Cknow\Money\Money::class)) {
+            return new LaravelMoney();
         }
 
         throw new InvalidArgumentException('You don\'t have a supported Money library installed!');

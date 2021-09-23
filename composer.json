@@ -31,12 +31,14 @@
     },
     "require-dev": {
         "brick/money": "^0.5.2",
+        "cknow/laravel-money": "^6.1",
         "moneyphp/money": "^3.3",
         "pestphp/pest-dev-tools": "dev-master"
     },
     "suggest": {
         "brick/money": "A powerful, immutable money library with support for specialized currencies",
-        "moneyphp/money": "A simpler but less versatile money library"
+        "moneyphp/money": "A simpler but less versatile money library",
+        "cknow/laravel-money": "PHP implementation of Fowler's Money pattern for Laravel"
     },
     "extra": {
         "branch-alias": {
