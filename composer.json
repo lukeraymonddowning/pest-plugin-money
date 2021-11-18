@@ -33,6 +33,7 @@
         "brick/money": "^0.5.3",
         "friendsofphp/php-cs-fixer": "^3.3",
         "moneyphp/money": "^3.3",
+        "orchestra/testbench": "^6.23",
         "pestphp/pest-dev-tools": "dev-master",
         "phpstan/phpstan": "^1.1"
     },
