@@ -33,7 +33,7 @@ jobs:
       run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress --ansi
 
     - name: Install 8.0 packages
-      run: composer require archtechx/money --dev
+      run: composer require archtechx/money --dev && composer require orchestra/testbench --dev
 
     - name: Unit Tests
       run: ./vendor/bin/pest --colors=always
