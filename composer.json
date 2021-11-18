@@ -30,7 +30,6 @@
         }
     },
     "require-dev": {
-        "archtechx/money": "^0.1.0",
         "brick/money": "^0.5.3",
         "friendsofphp/php-cs-fixer": "^3.3",
         "moneyphp/money": "^3.3",
@@ -40,7 +39,8 @@
     },
     "suggest": {
         "brick/money": "A powerful, immutable money library with support for specialized currencies",
-        "moneyphp/money": "A simpler but less versatile money library"
+        "moneyphp/money": "A simpler but less versatile money library",
+        "archtechx/money": "A Laravel library for handling money"
     },
     "extra": {
         "branch-alias": {
@@ -57,7 +57,7 @@
         "lint": "./vendor/bin/php-cs-fixer fix -v",
         "test:lint": "./vendor/bin/php-cs-fixer fix -v --dry-run",
         "test:types": "./vendor/bin/phpstan analyse --ansi",
-        "test:unit": "./vendor/bin/pest --colors=always",
+        "test:unit": "./vendor/bin/pest --colors=always --exclude-group='^8.0'",
         "test": [
             "@test:lint",
             "@test:types",
