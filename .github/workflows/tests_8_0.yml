@@ -1,4 +1,4 @@
-name: Tests
+name: Tests that require PHP 8.0 or greater
 
 on: ['push', 'pull_request']
 
@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
-        php: ['7.3', '7.4', '8.0']
+        php: ['8.0']
         dependency-version: [prefer-stable]
 
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
@@ -32,5 +32,8 @@ jobs:
     - name: Install PHP dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress --ansi
 
+    - name: Install 8.0 packages
+      run: composer require archtechx/money --dev
+
     - name: Unit Tests
-      run: composer test:unit
+      run: ./vendor/bin/pest --colors=always

@@ -3,6 +3,7 @@
 use Brick\Money\Money;
 
 it('can determine correct money types')
+    ->useMoneyLibrary(Money::class)
     ->expect(Money::of(10, 'GBP'))->toBeMoney()
     ->and('Hello World')->not->toBeMoney();
 

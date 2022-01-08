@@ -12,7 +12,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.3 || ^8.0 || ^8.1",
         "pestphp/pest": "^1.5",
         "pestphp/pest-plugin": "^1.0"
     },
@@ -30,15 +30,19 @@
         }
     },
     "require-dev": {
-        "brick/money": "^0.5.2",
+        "brick/money": "^0.5.3",
         "cknow/laravel-money": "^6.1",
+        "friendsofphp/php-cs-fixer": "^3.3",
         "moneyphp/money": "^3.3",
-        "pestphp/pest-dev-tools": "dev-master"
+        "orchestra/testbench": "^6.23",
+        "pestphp/pest-dev-tools": "dev-master",
+        "phpstan/phpstan": "^1.1"
     },
     "suggest": {
         "brick/money": "A powerful, immutable money library with support for specialized currencies",
         "moneyphp/money": "A simpler but less versatile money library",
         "cknow/laravel-money": "PHP implementation of Fowler's Money pattern for Laravel"
+        "archtechx/money": "A Laravel library for handling money"
     },
     "extra": {
         "branch-alias": {
@@ -52,10 +56,10 @@
         "preferred-install": "dist"
     },
     "scripts": {
-        "lint": "php-cs-fixer fix -v",
-        "test:lint": "php-cs-fixer fix -v --dry-run",
-        "test:types": "phpstan analyse --ansi",
-        "test:unit": "pest --colors=always",
+        "lint": "./vendor/bin/php-cs-fixer fix -v",
+        "test:lint": "./vendor/bin/php-cs-fixer fix -v --dry-run",
+        "test:types": "./vendor/bin/phpstan analyse --ansi",
+        "test:unit": "./vendor/bin/pest --colors=always --exclude-group='^8.0'",
         "test": [
             "@test:lint",
             "@test:types",
