@@ -1,7 +1,7 @@
 # pest-plugin-money
 
 This package is a plugin for [Pest PHP](https://pestphp.com). It allows you to write tests against monetary values 
-provided by either [brick/money](https://github.com/brick/money), [moneyphp/money](https://github.com/moneyphp/money) or [archtechx/money](https://github.com/archtechx/money)
+provided by either [brick/money](https://github.com/brick/money), [moneyphp/money](https://github.com/moneyphp/money), [archtechx/money](https://github.com/archtechx/money) or [cknow/laravel-money](https://github.com/cknow/laravel-money)
 using the same declarative syntax you're used to with Pest's expectation syntax.
 
 ## Installation
@@ -71,6 +71,7 @@ enforce which library to use, you can call the `useMoneyLibrary` function. Pass 
 useMoneyLibrary(\Money\Money::class); // Use the MoneyPHP library
 useMoneyLibrary(\Brick\Money\Money::class); // Use the Brick Money library
 useMoneyLibrary(\ArchTech\Money\Money::class); // Use the Archtech Money library
+useMoneyLibrary(\Cknow\Money\Money::class); // Use the cknow Money PHP library
 ```
 
 ## Setting a default currency
