@@ -41,7 +41,7 @@
     "suggest": {
         "brick/money": "A powerful, immutable money library with support for specialized currencies",
         "moneyphp/money": "A simpler but less versatile money library",
-        "cknow/laravel-money": "PHP implementation of Fowler's Money pattern for Laravel"
+        "cknow/laravel-money": "PHP implementation of Fowler's Money pattern for Laravel",
         "archtechx/money": "A Laravel library for handling money"
     },
     "extra": {
