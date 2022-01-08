@@ -31,6 +31,7 @@
     },
     "require-dev": {
         "brick/money": "^0.5.3",
+        "cknow/laravel-money": "^6.1",
         "friendsofphp/php-cs-fixer": "^3.3",
         "moneyphp/money": "^3.3",
         "orchestra/testbench": "^6.23",
@@ -40,6 +41,7 @@
     "suggest": {
         "brick/money": "A powerful, immutable money library with support for specialized currencies",
         "moneyphp/money": "A simpler but less versatile money library",
+        "cknow/laravel-money": "PHP implementation of Fowler's Money pattern for Laravel",
         "archtechx/money": "A Laravel library for handling money"
     },
     "extra": {
