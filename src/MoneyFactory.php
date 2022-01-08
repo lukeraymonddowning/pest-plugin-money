@@ -36,7 +36,7 @@ final class MoneyFactory
         if (class_exists(\Cknow\Money\Money::class)) {
             return new LaravelMoney();
         }
-          
+
         if (class_exists(\ArchTech\Money\Money::class)) {
             return new Archtech();
         }
