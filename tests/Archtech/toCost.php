@@ -1,6 +1,7 @@
 <?php
 
 use ArchTech\Money\Money;
+
 use function Lukeraymonddowning\PestPluginMoney\useMoneyLibrary;
 
 beforeEach(function () {

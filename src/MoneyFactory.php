@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Lukeraymonddowning\PestPluginMoney;
 
-use InvalidArgumentException;
 use Lukeraymonddowning\PestPluginMoney\Contracts\ChecksMoney;
 
 /**
@@ -36,6 +35,6 @@ final class MoneyFactory
             return new Archtech();
         }
 
-        throw new InvalidArgumentException('You don\'t have a supported Money library installed!');
+        throw new \InvalidArgumentException('You don\'t have a supported Money library installed!');
     }
 }
