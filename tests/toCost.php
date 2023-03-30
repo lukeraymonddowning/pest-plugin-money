@@ -1,6 +1,7 @@
 <?php
 
 use Brick\Money\Money;
+
 use function Lukeraymonddowning\PestPluginMoney\useMoneyLibrary;
 
 beforeEach(function () {

@@ -8,6 +8,7 @@ use Pest\Expectation;
 
 /**
  * @template TMoney
+ *
  * @phpstan-type MoneyAmount TMoney|string|int|float
  */
 interface ChecksMoney

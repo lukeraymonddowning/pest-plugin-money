@@ -1,6 +1,7 @@
 <?php
 
 use ArchTech\Money\Money;
+
 use function Lukeraymonddowning\PestPluginMoney\useMoneyLibrary;
 
 it('can determine correct money types for archtech', function () {

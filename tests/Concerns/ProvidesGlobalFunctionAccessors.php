@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Lukeraymonddowning\PestPluginMoney\Tests\Concerns;
 
-use function Lukeraymonddowning\PestPluginMoney\useCurrency;
-use function Lukeraymonddowning\PestPluginMoney\useMoneyLibrary;
 use Pest\PendingObjects\TestCall;
 use PHPUnit\Framework\TestCase;
+
+use function Lukeraymonddowning\PestPluginMoney\useCurrency;
+use function Lukeraymonddowning\PestPluginMoney\useMoneyLibrary;
 
 trait ProvidesGlobalFunctionAccessors
 {
